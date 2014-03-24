@@ -1,0 +1,18 @@
+
+// page.replace_html('cart', render(@cart))
+// $("<%= escape_javascript(render @cart) %>").replaceWith("#cart");
+$("#cart").html("<%= escape_javascript(render @cart) %>");
+
+// page[:current_item].visual_effect :highlight,
+//                                   :startcolor => "#88ff88",
+//                                   :endcolor => "#114411"
+
+// $('#datatable').toggleClass("highlight");
+
+$("#notice").hide();
+
+if ($('#cart tr').length == 1) { $('#cart').show('blind', 1000); }
+
+$('#current_item').css({'background-color':'#88ff88'}).
+          animate({'background-color':'#114411'}, 1000);
+                                
